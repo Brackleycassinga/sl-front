@@ -1,10 +1,10 @@
-import Head from 'next/head';
+import Head from "next/head";
 
 export default function SEO({
-  description = 'startup product landing page',
-  author = 'JSM',
+  description = "SuluhishHR  Outil digital de gestion des ressources humaines de qualité supérieure pour votre entreprise",
+  author = "SuluhishHR",
   meta,
-  title = 'startup landing title',
+  title = "SuluhishHR",
 }) {
   const metaData = [
     {
@@ -40,7 +40,7 @@ export default function SEO({
       content: description,
     },
   ].concat(meta);
-  
+
   return (
     <Head>
       <title>{title}</title>

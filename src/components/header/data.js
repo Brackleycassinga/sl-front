@@ -1,18 +1,18 @@
 export default [
   {
-    path: 'home',
-    label: 'Home',
+    path: "home",
+    label: "Acceuil",
   },
   {
-    path: 'feature',
-    label: 'Features',
+    path: "feature",
+    label: "Offres d'emploi",
   },
   {
-    path: 'pricing',
-    label: 'Pricing',
+    path: "pricing",
+    label: "Achetez SuluhishoHr",
   },
   {
-    path: 'testimonial',
-    label: 'Testimonial',
+    path: "testimonial",
+    label: "Temoignages",
   },
 ];

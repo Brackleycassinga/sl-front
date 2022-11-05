@@ -1,62 +1,62 @@
-/** @jsx jsx */
-import { useState } from 'react';
+/** jsxImportSource jsx */
+import { useState } from "react";
 
-import { jsx, Container, Box, Flex } from 'theme-ui';
-import { keyframes } from '@emotion/core';
-import Carousel from 'react-multi-carousel';
-import cx from 'classnames';
+import { jsx, Container, Box, Flex } from "theme-ui";
+import { keyframes } from "@emotion/core";
+import Carousel from "react-multi-carousel";
+import cx from "classnames";
 
-import PriceCard from 'components/price-card';
-import SectionHeader from 'components/section-header';
+import PriceCard from "components/price-card";
+import SectionHeader from "components/section-header";
 
-import { sliderParams } from 'sections/package/config';
-import { packages } from 'sections/package/data';
+import { sliderParams } from "sections/package/config";
+import { packages } from "sections/package/data";
 
 export default function Package() {
   const { monthly, annual } = packages;
 
   const [state, setState] = useState({
-    active: 'monthly',
+    active: "monthly",
     pricingPlan: monthly,
   });
 
   const handlePricingPlanChange = (plan) => {
-    if (plan === 'annual') {
+    if (plan === "annual") {
       setState({
-        active: 'annual',
+        active: "annual",
         pricingPlan: annual,
       });
     } else {
       setState({
-        active: 'monthly',
+        active: "monthly",
         pricingPlan: monthly,
       });
     }
   };
 
   return (
-    <section sx={{ variant: 'section.pricing' }} id="pricing">
+    <section sx={{ variant: "section.pricing" }} id="pricing">
       <Container>
         <SectionHeader
-          slogan="Pricing Plan"
-          title="Choose your pricing plan"
+          slogan="Plan tarifaire"
+          title="Choisissez votre forfait"
         />
 
         <Flex sx={styles.buttonGroup}>
           <Box sx={styles.buttonGroupInner}>
             <button
-              className={cx({ active: state.active === 'monthly' })}
-              aria-label="Monthly"
-              onClick={() => handlePricingPlanChange('monthly')}
+              className={cx({ active: state.active === "monthly" })}
+              aria-label="Mois"
+              onClick={() => handlePricingPlanChange("monthly")}
             >
-              Monthly Plan
+              Tarif mensuel{" "}
             </button>
             <button
-              className={cx({ active: state.active === 'annual' })}
+              className={cx({ active: state.active === "annual" })}
               aria-label="Annual"
-              onClick={() => handlePricingPlanChange('annual')}
+              onClick={() => handlePricingPlanChange("annual")}
             >
-              Annual Plan
+              Tarif annuel
             </button>
           </Box>
         </Flex>
@@ -95,75 +95,75 @@ const fadeIn2 = keyframes`
 
 const styles = {
   pricingWrapper: {
-    mb: '-40px',
-    mt: '-40px',
+    mb: "-40px",
+    mt: "-40px",
     mx: -3,
-    display: 'flex',
-    flexDirection: 'column',
-    flexWrap: 'wrap',
-    '&.pricing__wrapper .package__card': {
-      '.package__header': {
+    display: "flex",
+    flexDirection: "column",
+    flexWrap: "wrap",
+    "&.pricing__wrapper .package__card": {
+      ".package__header": {
         animation: `${fadeIn} 0.8s ease-in`,
       },
-      'ul > li': {
+      "ul > li": {
         animation: `${fadeIn2} 0.7s ease-in`,
       },
-      '.package__price': {
+      ".package__price": {
         animation: `${fadeIn2} 0.9s ease-in`,
       },
       button: {
         animation: `${fadeIn2} 1s ease-in`,
       },
     },
-    '.carousel-container': {
-      width: '100%',
-      '> ul > li ': {
-        display: 'flex',
+    ".carousel-container": {
+      width: "100%",
+      "> ul > li ": {
+        display: "flex",
       },
     },
-    '.button__group': {
-      display: ['flex', null, null, null, 'none'],
+    ".button__group": {
+      display: ["flex", null, null, null, "none"],
       mb: [4, null, null, null, 0],
     },
   },
   pricingItem: {
     mx: 3,
-    display: 'flex',
+    display: "flex",
     flexShrink: 0,
-    flex: '1 1 auto',
+    flex: "1 1 auto",
   },
   buttonGroup: {
-    justifyContent: 'center',
-    mb: '7',
-    mt: ['-15px', '-35px'],
-    position: 'relative',
+    justifyContent: "center",
+    mb: "7",
+    mt: ["-15px", "-35px"],
+    position: "relative",
     zIndex: 2,
   },
   buttonGroupInner: {
-    display: 'flex',
-    padding: '7px',
-    margin: '0 auto',
-    borderRadius: '5px',
-    backgroundColor: '#F7F8FB',
+    display: "flex",
+    padding: "7px",
+    margin: "0 auto",
+    borderRadius: "5px",
+    backgroundColor: "#F7F8FB",
     button: {
       border: 0,
-      padding: ['15px 20px', '15px 27px'],
-      borderRadius: '5px',
-      color: 'text',
+      padding: ["15px 20px", "15px 27px"],
+      borderRadius: "5px",
+      color: "text",
       fontSize: [1, 2],
       lineHeight: 1.2,
       fontWeight: 500,
-      backgroundColor: 'transparent',
-      cursor: 'pointer',
-      fontFamily: 'body',
-      letterSpacing: '-0.24px',
-      transition: 'all 0.3s',
-      '&.active': {
-        color: '#0f2137',
-        backgroundColor: '#ffffff',
-        boxShadow: '0 3px 4px rgba(38, 78, 118, 0.1)',
+      backgroundColor: "transparent",
+      cursor: "pointer",
+      fontFamily: "body",
+      letterSpacing: "-0.24px",
+      transition: "all 0.3s",
+      "&.active": {
+        color: "#0f2137",
+        backgroundColor: "#ffffff",
+        boxShadow: "0 3px 4px rgba(38, 78, 118, 0.1)",
       },
-      '&:focus': {
+      "&:focus": {
         outline: 0,
       },
     },

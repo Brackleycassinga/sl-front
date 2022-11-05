@@ -1,34 +1,48 @@
-import React from 'react';
-import { ThemeProvider } from 'theme-ui';
-import theme from 'theme';
+import React, { useEffect, useState } from "react";
+import { ThemeProvider } from "theme-ui";
+import theme from "theme";
+import SEO from "components/seo";
+import Layout from "components/layout";
 
-import SEO from 'components/seo';
-import Layout from 'components/layout';
-
-import Banner from 'sections/banner';
-import KeyFeature from 'sections/key-feature';
-import ServiceSection from 'sections/service-section';
-import Feature from 'sections/feature';
-import CoreFeature from 'sections/core-feature';
-import WorkFlow from 'sections/workflow';
-import Package from 'sections/package';
-import TeamSection from 'sections/team-section';
-import TestimonialCard from 'sections/testimonial';
+import Banner from "sections/banner";
+import KeyFeature from "sections/key-feature";
+import ServiceSection from "sections/service-section";
+import Feature from "sections/feature";
+import CoreFeature from "sections/core-feature";
+import WorkFlow from "sections/workflow";
+import Package from "sections/package";
+import TeamSection from "sections/team-section";
+import TestimonialCard from "sections/testimonial";
+import axios from "axios";
+import { Grid, Stack, Typography } from "@mui/material";
 
 export default function IndexPage() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://143.244.190.128/api/offres?page=1&limit=3`)
+      .then((res) => {
+        const persons = res.data.results;
+        setData(persons);
+      });
+  }, []);
   return (
     <ThemeProvider theme={theme}>
       <Layout>
-        <SEO title="NextJS Landing Page" />
+        <SEO title="Suluhisho HR" />
         <Banner />
         <KeyFeature />
-        <ServiceSection />
-        <Feature />
-        <CoreFeature />
-        <WorkFlow />
+        <Package />
+        <TestimonialCard data={data} />
+
+        {/* <ServiceSection /> */}
+        {/* <Feature /> */}
+        {/* <CoreFeature /> */}
+        {/* <WorkFlow />
         <Package />
         <TeamSection />
-        <TestimonialCard />
+        <TestimonialCard /> */}
+        {/* <TestimonialCard data={data} /> */}
       </Layout>
     </ThemeProvider>
   );
