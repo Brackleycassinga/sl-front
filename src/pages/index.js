@@ -14,7 +14,7 @@ import Package from "sections/package";
 import TeamSection from "sections/team-section";
 import TestimonialCard from "sections/testimonial";
 import axios from "axios";
-import { Grid, Stack, Typography } from "@mui/material";
+import { Grid, Box, Typography } from "@mui/material";
 
 export default function IndexPage() {
   const [data, setData] = useState([]);
@@ -32,8 +32,12 @@ export default function IndexPage() {
         <SEO title="Suluhisho HR" />
         <Banner />
         <KeyFeature />
-        <Package />
-        <TestimonialCard data={data} />
+        <Box sx={{ mb: 10, mt: 10 }}>
+          <Package />
+        </Box>
+        <Box sx={{ mb: 20 }}>
+          <TestimonialCard data={data} />
+        </Box>
 
         {/* <ServiceSection /> */}
         {/* <Feature /> */}
