@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
-    "postbuild": "next-sitemap"
+    "postbuild": "next-sitemap",
+    "export": "yarn build && next export -o _static"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",
