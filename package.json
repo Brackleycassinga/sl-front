@@ -7,7 +7,8 @@
     "dev": "next dev",
     "build": "next build && next export",
     "postbuild": "next-sitemap",
-    "export": "yarn build && next export -o _static"
+    "start":"next start -H 0.0.0.0 -p ${PORT:-8080}",
+    "export": "yarn run build && next export && mv out _static"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",
@@ -16,6 +17,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.12",
+    "@next/env": "^13.0.3",
     "axios": "^1.1.3",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
