@@ -7,7 +7,7 @@
     "dev": "next dev",
     "build": "next build && next export",
     "postbuild": "next-sitemap",
-    "start":"next start -H 0.0.0.0 -p ${PORT:-8080}",
+    "start": "next start -H 0.0.0.0 -p ${PORT:-8080}",
     "export": "yarn run build && next export && mv out _static"
   },
   "dependencies": {
@@ -38,6 +38,7 @@
     "react-modal-video": "^1.2.6",
     "react-multi-carousel": "^2.5.5",
     "react-scroll": "^1.8.0",
+    "react-slideshow-image": "^4.0.5",
     "react-stickynode": "^3.0.3",
     "theme-ui": "^0.3.1",
     "typeface-dm-sans": "^1.1.3"

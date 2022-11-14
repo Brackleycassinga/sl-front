@@ -1,7 +1,7 @@
 /** jsxImportSourceImportSource jsx */
 import { jsx, Container, Flex, Button } from "theme-ui";
 import { keyframes } from "@emotion/core";
-
+import { Box } from "@mui/material";
 import Logo from "components/logo";
 import MenuItem from "components/menu-item";
 import MobileDrawer from "components/header/mobile-drawer";
@@ -18,7 +18,10 @@ export default function Header({ className }) {
   return (
     <header className={className} sx={styles.header} id="header">
       <Container sx={styles.container}>
-        <Logo src={LogoDark} />
+        <Box sx={{ pt: 2 }}>
+          <Logo src={LogoDark} />
+        </Box>
+
         <Flex sx={styles.nav} as="nav">
           {menuItems.map(renderMenuItem)}
         </Flex>

@@ -1,7 +1,7 @@
 /** jsxImportSource jsx */
 import { jsx, Container, Box, Heading, Text, Image, Button } from "theme-ui";
 
-import BannerImage from "assets/banner-thumb.png";
+import BannerImage from "assets/m.png";
 import ShapeLeft from "assets/shape-left.png";
 import ShapeRight from "assets/shape-right.png";
 
@@ -9,7 +9,7 @@ export default function Banner() {
   return (
     <section sx={styles.banner} id="home">
       <Container sx={styles.banner.container}>
-        <Box sx={styles.banner.contentBox}>
+        {/* <Box sx={styles.banner.contentBox}>
           <Heading as="h1" variant="heroPrimary">
             SuluhishoHR
           </Heading>
@@ -18,7 +18,7 @@ export default function Banner() {
             supérieure pour votre entreprise
           </Text>
           <Button variant="primary">Explorer</Button>
-        </Box>
+        </Box> */}
         <Box sx={styles.banner.imageBox}>
           <Image src={BannerImage} alt="banner" />
         </Box>
@@ -75,10 +75,11 @@ const styles = {
       justifyContent: "center",
       textAlign: "center",
       display: "inline-flex",
-      mb: [0, null, -6, null, null, "-40px", null, -3],
+      marginBottom: "100px",
+      // mb: [0, null, -6, null, null, "-40px", null, -3],
       img: {
-        position: "relative",
-        height: [245, "auto"],
+        width: "50%",
+        height: "50%",
       },
     },
   },

@@ -4,15 +4,16 @@ export default [
     label: "Acceuil",
   },
   {
-    path: "feature",
+    path: "testimonial",
     label: "Offres d'emploi",
   },
+
   {
     path: "pricing",
     label: "Achetez SuluhishoHr",
   },
   {
-    path: "testimonial",
-    label: "Temoignages",
+    path: "testimonial ",
+    label: "Contact",
   },
 ];

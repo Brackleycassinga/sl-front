@@ -14,8 +14,7 @@ import Package from "sections/package";
 import TeamSection from "sections/team-section";
 import TestimonialCard from "sections/testimonial";
 import axios from "axios";
-import { Grid, Box, Typography } from "@mui/material";
-
+import { Box } from "@mui/material";
 export default function IndexPage() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -26,6 +25,7 @@ export default function IndexPage() {
         setData(persons);
       });
   }, []);
+
   return (
     <ThemeProvider theme={theme}>
       <Layout>
