@@ -79,7 +79,7 @@ const styles = {
       // mb: [0, null, -6, null, null, "-40px", null, -3],
       img: {
         width: "50%",
-        height: "50%",
+        height: "700px",
       },
     },
   },

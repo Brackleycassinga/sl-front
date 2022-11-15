@@ -3,6 +3,8 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import { Typography, Stack } from "@mui/material";
 import { jsx, Button } from "theme-ui";
 import moment from "moment";
+import "moment/locale/fr"; // without this line it didn't work
+moment.locale("fr");
 
 export default function ReviewCard({ review }) {
   return (
