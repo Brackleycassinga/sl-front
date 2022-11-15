@@ -16,8 +16,10 @@ import { keyframes } from "@emotion/core";
 import { IoIosPlay } from "react-icons/io";
 
 import TextFeature from "components/text-feature";
+// import BannerImage from "assets/m.png";
+import ServiceThumb from "assets/m.png";
 
-import ServiceThumb from "assets/service-thumb.png";
+// import ServiceThumb from "assets/service-thumb.png";
 import ShapePattern from "assets/shape-pattern1.png";
 
 import data from "sections/service-section/data";
@@ -58,9 +60,9 @@ export default function ServiceSection() {
               <IoIosPlay />
             </span>
           </Button>
-          <Box sx={styles.shapeBox}>
+          {/* <Box sx={styles.shapeBox}>
             <Image src={ShapePattern} alt="Shape" />
-          </Box>
+          </Box> */}
         </Box>
         <Box sx={styles.contentBox}>
           <TextFeature title={data.title} subTitle={data.subTitle} />

@@ -32,6 +32,8 @@ export default function IndexPage() {
         <SEO title="Suluhisho HR" />
         <Banner />
         <KeyFeature />
+        <ServiceSection />
+
         <Box sx={{ mb: 10, mt: 10 }}>
           <Package />
         </Box>
@@ -39,7 +41,6 @@ export default function IndexPage() {
           <TestimonialCard data={data} />
         </Box>
 
-        {/* <ServiceSection /> */}
         {/* <Feature /> */}
         {/* <CoreFeature /> */}
         {/* <WorkFlow />
