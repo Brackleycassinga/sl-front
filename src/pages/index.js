@@ -19,7 +19,7 @@ export default function IndexPage() {
   const [data, setData] = useState([]);
   useEffect(() => {
     axios
-      .get(`http://143.244.190.128/api/offres?page=1&limit=3`)
+      .get(`https://suluhisho-hr-api.online/api/offres?page=1&limit=3`)
       .then((res) => {
         const persons = res.data.results;
         setData(persons);
