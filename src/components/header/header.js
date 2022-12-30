@@ -14,7 +14,9 @@ export default function Header({ className }) {
   const renderMenuItem = (menuItem) => (
     <MenuItem label={menuItem.label} path={menuItem.path} key={menuItem.path} />
   );
-
+  const handleClick = () => {
+    window.open('https://sea-lion-app-yek9u.ondigitalocean.app/register')
+  }
   return (
     <header className={className} sx={styles.header} id="header">
       <Container sx={styles.container}>
@@ -26,12 +28,13 @@ export default function Header({ className }) {
           {menuItems.map(renderMenuItem)}
         </Flex>
         <Button
-          className="donate__btn"
-          variant="secondary"
-          aria-label="Get Started"
-        >
-          Créer un compte{" "}
-        </Button>
+      className="donate__btn"
+      variant="secondary"
+      aria-label="Get Started"
+      onClick={handleClick}
+    >
+      Créer un compte
+    </Button>
         <MobileDrawer />
       </Container>
     </header>
